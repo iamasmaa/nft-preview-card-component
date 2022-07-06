@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --body-bg-color: hsl(217, 54%, 11%);
+    --card-bg-color: hsl(216, 50%, 16%);
+    --white: hsl(0, 100%, 100%);
+    --cyan: hsl(178, 100%, 50%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --line-blue: hsl(215, 32%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Outfit" , sans-serif;
+    font-size: 18px;
+    background-color: var(--body-bg-color);
+    padding: 15px;
+    color: var(--soft-blue);
+}
+.content{
+    padding: 15px;
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+img{
+    max-width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+p{
+    font-weight: 300;
+}
+.content .first{
+    position: relative; 
+}
+.content .first .top{
+    border-radius: 10px;
+}
+.content .first div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    opacity: 0;
+    background-color:hsl(178, 100%, 50%,60%);
+    height: calc(100% - 4px);
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+.content .first div:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.content .first div img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.content h2{
+    color: var(--white);
+    margin: 10px 5px 5px 0;
+}
+.content h2:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+.content ul{
+    display: flex;align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line-blue);
+}
+.content ul li{
+    display: flex;
+    align-items: center;
+}
+.content ul li:first-child{
+    color: var(--cyan);
+}
+.content ul li img{
+    margin-right: 10px;
+}
+.content .owner{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 20px;
+}
+.content .owner img{
+    width: 40px;
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.content .owner p span{
+    color: var(--white);
+    font-weight: 400;
+
+}
+.content .owner p span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(min-width: 500px) {
+    .content{
+        width: 450px;
+        margin: 0 auto 10px;
+    }
+}
