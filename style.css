@@ -25,7 +25,6 @@ body{
     background-color: var(--card-bg-color);
     border-radius: 10px;
     margin-bottom: 15px;
-display: flex;
 }
 img{
     max-width: 100%;
